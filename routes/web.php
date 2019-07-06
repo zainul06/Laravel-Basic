@@ -18,3 +18,23 @@ Route::get('/', function () {
 Route::get('/user', function () {
     return "Hello word!";
 });
+
+Route::get('/siswa/{id}', function($id) {
+    return "Hello word". $id;
+});
+
+Route::get('/karyawan/{id?}', function($id=null) {
+    return "Hello Guru".$id;
+});
+
+Route::get('siswa',function() {
+    return view('siswa');
+});
+
+Route::get('guru', function() {
+    return view('guru');
+});
+
+Route::get('admin', function() {
+    return view('admin');
+});
